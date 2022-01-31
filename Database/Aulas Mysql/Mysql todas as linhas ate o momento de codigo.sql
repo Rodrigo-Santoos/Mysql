@@ -1,3 +1,4 @@
+/*-------------------------------------------------Aula 07 Mysql----------------------------------------------------------------------------*/
 /*dropando a tabela*/
 drop database cadastro;
 
@@ -26,6 +27,7 @@ create table pessoas(
     nacionalidade varchar(20) default 'BRASIL'
 ) default charset utf8;
 
+/*-------------------------------------------------Aula 05 Mysql----------------------------------------------------------------------------*/
 /*inserindo na tabela modo1*/
 insert into pessoas
 	(nome, nascimento, sexo, peso, altura, nacionalidade)
@@ -45,6 +47,8 @@ insert into pessoas values
   /*selecionando tudo na tabela*/
     select * from pessoas;
     
+/*-------------------------------------------------Aula 06 Mysql----------------------------------------------------------------------------*/
+
 /*adicionando uma nova coluna desse jeito ele vai adicionar sempre na ultima*/
 alter table pessoas
 add column profissao varchar(10);
