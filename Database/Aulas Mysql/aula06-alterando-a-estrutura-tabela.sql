@@ -30,3 +30,27 @@ alter table pessoas
 rename to gafanhotos;
 
 select * from gafanhotos
+
+/*outra tabela */
+create table if not exists cursos(
+	nome varchar(30) not null unique,
+    descricao text,
+    carga int unsigned,
+    totaulas int,
+    ano year default '2022'
+) default charset = utf8;
+
+/*adicionando a id que foi esquicida de proposito*/
+alter table cursos
+add column id int first;
+
+alter table cursos
+change column id idcursos int;
+
+
+/*adicionando chave primaria no id*/
+alter table cursos
+add primary key(idcursos);
+
+select * from cursos;
+describe cursos;
